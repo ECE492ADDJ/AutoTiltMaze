@@ -1,0 +1,59 @@
+/*
+ * test.c
+ *
+ *  Created on: Jan 28, 2017
+ *      Author: dktrotti
+ */
+
+#include <stdio.h>
+#include "includes.h"
+#include "altera_avalon_pio_regs.h"
+#include "altera_up_avalon_character_lcd.h"
+
+/* Definition of Task Stacks */
+#define   TASK_STACKSIZE       2048
+OS_STK    task1_stk[TASK_STACKSIZE];
+
+/* Definition of Task Priorities */
+#define TASK1_PRIORITY      1
+
+/* Definition of global variables */
+alt_up_character_lcd_dev *char_lcd;
+
+void task1(void* pdata)
+{
+	int count = 0;
+
+	while (1)
+	{
+		alt_up_character_lcd_set_cursor_pos(char_lcd, 0, 0);
+		alt_up_character_lcd_string(char_lcd, "                ");
+		alt_up_character_lcd_set_cursor_pos(char_lcd, count, 1);
+		alt_up_character_lcd_string(char_lcd, "$");
+
+		count = (count + 1) % 16;
+
+		IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LEDS_BASE, IORD_ALTERA_AVALON_PIO_DATA(ON_BOARD_SWITCHES_BASE));
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+/* The main function creates two task and starts multi-tasking */
+int main(void)
+{
+	printf("Hello world.\n");
+
+	OSTaskCreateExt(task1,
+                	NULL,
+                	(void *)&task1_stk[TASK_STACKSIZE-1],
+                	TASK1_PRIORITY,
+                	TASK1_PRIORITY,
+                	task1_stk,
+                	TASK_STACKSIZE,
+                	NULL,
+                	0);
+
+	OSStart();
+	return 0;
+}

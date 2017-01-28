@@ -1,0 +1,49 @@
+!SESSION 2017-01-28 14:03:15.896 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 14:04:30.216
+!MESSAGE Indexed 'HardwareTest_bsp' (94 sources, 67 headers) in 1.50 sec: 2,293 declarations; 10,047 references; 125 unresolved inclusions; 5 syntax errors; 203 unresolved names (1.62%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 14:04:31.668
+!MESSAGE Indexed 'HardwareTest' (1 sources, 13 headers) in 0.06 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 14:07:24.353
+!MESSAGE Indexed 'HardwareTest' (1 sources, 54 headers) in 0.44 sec: 2,035 declarations; 2,037 references; 3 unresolved inclusions; 0 syntax errors; 3 unresolved names (0.07%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:14:05.064
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --stop --sidp=0x1109058 --id=0x0 --timestamp=1485637155]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:14:06.574
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --go --sidp=0x1109058 --id=0x0 --timestamp=1485637155 /afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest/HardwareTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:14:49.259
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.7]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:14:49.446
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --stop --sidp=0x1109058 --id=0x0 --timestamp=1485637155]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:14:50.813
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --go --sidp=0x1109058 --id=0x0 --timestamp=1485637155 /afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest/HardwareTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:29.919
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.7]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:30.111
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --stop --sidp=0x1109058 --id=0x0 --timestamp=1485637155]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:31.479
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --go --sidp=0x1109058 --id=0x0 --timestamp=1485637155 /afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest/HardwareTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:45.424
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [2-1.7]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:45.616
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --stop --sidp=0x1109058 --id=0x0 --timestamp=1485637155]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:46.983
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --go --sidp=0x1109058 --id=0x0 --timestamp=1485637155 /afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest/HardwareTest.elf]
