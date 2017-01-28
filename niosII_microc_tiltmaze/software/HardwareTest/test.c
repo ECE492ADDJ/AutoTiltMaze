@@ -10,8 +10,6 @@
 #include "altera_avalon_pio_regs.h"
 #include "altera_up_avalon_character_lcd.h"
 
-#define LCD_PATH "/dev/character_lcd_0"
-
 /* Definition of Task Stacks */
 #define   TASK_STACKSIZE       2048
 OS_STK    task1_stk[TASK_STACKSIZE];
@@ -47,7 +45,7 @@ int main(void)
 	printf("Hello world.\n");
 
 	OSInit();
-	char_lcd = alt_up_character_lcd_open_dev(LCD_PATH);
+	char_lcd = alt_up_character_lcd_open_dev(CHARACTER_LCD_0_NAME);
 	alt_up_character_lcd_init(char_lcd);
 
 	OSTaskCreateExt(task1,

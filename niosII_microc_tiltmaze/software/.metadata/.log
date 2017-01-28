@@ -47,3 +47,19 @@ Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.pa
 
 !ENTRY com.altera.sbtgui.launch 1 0 2017-01-28 14:15:46.983
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [2-1.7]' --device=1 --instance=0 --go --sidp=0x1109058 --id=0x0 --timestamp=1485637155 /afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest/HardwareTest.elf]
+!SESSION 2017-01-28 15:38:44.076 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 15:40:05.801
+!MESSAGE Indexed 'TiltMazeController_bsp' (220 sources, 223 headers) in 5.02 sec: 12,686 declarations; 45,944 references; 96 unresolved inclusions; 5 syntax errors; 356 unresolved names (0.60%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 15:40:06.247
+!MESSAGE Indexed 'TiltMazeController' (6 sources, 65 headers) in 0.43 sec: 2,753 declarations; 3,500 references; 23 unresolved inclusions; 6 syntax errors; 129 unresolved names (2.02%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-28 15:52:48.547
+!MESSAGE Indexed 'TiltMazeController' (6 sources, 113 headers) in 0.46 sec: 5,005 declarations; 5,609 references; 2 unresolved inclusions; 0 syntax errors; 11 unresolved names (0.10%)
