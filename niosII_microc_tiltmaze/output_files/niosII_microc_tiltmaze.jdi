@@ -1,10 +1,10 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="386248cdb5c749c5d181"/>
+    <hash md5_digest_80b="bbb251a0f61aa9d7a9fb"/>
   </project>
   <file_info>
-    <file checksum="0x006901E0" device="EP2C35F672C6" path="niosII_microc_tiltmaze.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x1C13162D" device="EPCS16" path="niosII_microc_tiltmaze.pof" usercode="0x00000000"/>
+    <file checksum="0x006BE919" device="EP2C35F672C6" path="niosII_microc_tiltmaze.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x1C173151" device="EPCS16" path="niosII_microc_tiltmaze.pof" usercode="0x00000000"/>
   </file_info>
   <hub_info ir_width="2" node_count="2"/>
   <node_info>

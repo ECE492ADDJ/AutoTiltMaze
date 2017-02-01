@@ -222,6 +222,7 @@ sdram_0          0x00800000         0x00800000
 sram_0           0x01080000         0x00080000
 reset            0x01104000         0x00000020
 onchip_memory2_0 0x01104020         0x00003fe0
+descriptor_memory 0x01108000         0x00001000
 *default*        0x00000000         0xffffffff
 
 Linker script and memory map
@@ -240,6 +241,7 @@ LOAD /OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-
                 0x00800000                __alt_mem_sdram_0 = 0x800000
                 0x01080000                __alt_mem_sram_0 = 0x1080000
                 0x01104000                __alt_mem_onchip_memory2_0 = 0x1104000
+                0x01108000                __alt_mem_descriptor_memory = 0x1108000
 
 .entry          0x01104000       0x20
  *(.entry)
@@ -1071,6 +1073,14 @@ LOAD /OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-
                 0x011041bc                . = ALIGN (0x4)
                 0x011041bc                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
                 0x00817854                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.descriptor_memory
+                0x01108000        0x0 load address 0x00817854
+                0x01108000                PROVIDE (_alt_partition_descriptor_memory_start, ABSOLUTE (.))
+ *(.descriptor_memory. descriptor_memory.*)
+                0x01108000                . = ALIGN (0x4)
+                0x01108000                PROVIDE (_alt_partition_descriptor_memory_end, ABSOLUTE (.))
+                0x00817854                PROVIDE (_alt_partition_descriptor_memory_load_addr, LOADADDR (.descriptor_memory))
 
 .stab
  *(.stab)

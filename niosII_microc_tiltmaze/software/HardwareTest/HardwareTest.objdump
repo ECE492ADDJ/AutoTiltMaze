@@ -53,33 +53,33 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  16 .debug_ranges 00000310  00000000  00000000  00060900  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000006  00000000  00000000  00064ca0  2**0
+ 17 .thread_model 00000006  00000000  00000000  00064ccc  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  00064ca6  2**0
+ 18 .cpu          0000000c  00000000  00000000  00064cd2  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  00064cb2  2**0
+ 19 .qsys         00000001  00000000  00000000  00064cde  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  00064cb3  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  00064cdf  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  00064cb4  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  00064ce0  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  00064cb8  2**0
+ 22 .sysid_base   00000004  00000000  00000000  00064ce4  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  00064cbc  2**0
+ 23 .sysid_time   00000004  00000000  00000000  00064ce8  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   0000000b  00000000  00000000  00064cc0  2**0
+ 24 .stderr_dev   0000000b  00000000  00000000  00064cec  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    0000000b  00000000  00000000  00064ccb  2**0
+ 25 .stdin_dev    0000000b  00000000  00000000  00064cf7  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   0000000b  00000000  00000000  00064cd6  2**0
+ 26 .stdout_dev   0000000b  00000000  00000000  00064d02  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 0000000d  00000000  00000000  00064ce1  2**0
+ 27 .sopc_system_name 0000000d  00000000  00000000  00064d0d  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000046  00000000  00000000  00064cee  2**0
+ 28 .quartus_project_dir 00000046  00000000  00000000  00064d1a  2**0
                   CONTENTS, READONLY
- 29 .jdi          000051db  00000000  00000000  00064d34  2**0
+ 29 .jdi          000051db  00000000  00000000  00064d60  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     00059539  00000000  00000000  00069f0f  2**0
+ 30 .sopcinfo     00065614  00000000  00000000  00069f3b  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 01104000 l    d  .entry	00000000 .entry
@@ -353,6 +353,7 @@ SYMBOL TABLE:
 0080d740 g     F .text	00000048 alt_ic_irq_enabled
 00807394 g     F .text	000000e4 OS_FlagInit
 0080dc80 g     F .text	00000098 alt_alarm_stop
+01108000 g       *ABS*	00000000 __alt_mem_descriptor_memory
 008107b0 g     O .rwdata	00000002 OSTaskIdleStkSize
 0081236c g     O .bss	00000004 alt_irq_active
 00809170 g     F .text	000000c0 OSSemAccept
@@ -1068,10 +1069,10 @@ void task1(void* pdata)
 
 		IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LEDS_BASE, IORD_ALTERA_AVALON_PIO_DATA(ON_BOARD_SWITCHES_BASE));
   800294:	00804474 	movhi	r2,273
-  800298:	10a40804 	addi	r2,r2,-28640
+  800298:	10a80804 	addi	r2,r2,-24544
   80029c:	10c00037 	ldwio	r3,0(r2)
   8002a0:	00804474 	movhi	r2,273
-  8002a4:	10a40c04 	addi	r2,r2,-28624
+  8002a4:	10a80c04 	addi	r2,r2,-24528
   8002a8:	10c00035 	stwio	r3,0(r2)
 
 		OSTimeDlyHMSM(0, 0, 0, 100);
@@ -1100,7 +1101,7 @@ int main(void)
 
 	OSInit();
   8002e0:	080436c0 	call	80436c <OSInit>
-	char_lcd = alt_up_character_lcd_open_dev(LCD_PATH);
+	char_lcd = alt_up_character_lcd_open_dev(CHARACTER_LCD_0_NAME);
   8002e4:	01002074 	movhi	r4,129
   8002e8:	213ad804 	addi	r4,r4,-5280
   8002ec:	080cd300 	call	80cd30 <alt_up_character_lcd_open_dev>
@@ -19550,7 +19551,7 @@ void alt_sys_init( void )
   80bd50:	d839883a 	mov	fp,sp
     ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
   80bd54:	01004474 	movhi	r4,273
-  80bd58:	21240004 	addi	r4,r4,-28672
+  80bd58:	21280004 	addi	r4,r4,-24576
   80bd5c:	000b883a 	mov	r5,zero
   80bd60:	000d883a 	mov	r6,zero
   80bd64:	01c0fa04 	movi	r7,1000

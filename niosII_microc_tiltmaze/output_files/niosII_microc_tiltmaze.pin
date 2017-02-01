@@ -83,13 +83,13 @@ GND+                         : A13       :        :                   :         
 GND*                         : A14       :        :                   :         : 4         :                
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
-GND*                         : A17       :        :                   :         : 4         :                
-GND*                         : A18       :        :                   :         : 4         :                
-GND*                         : A19       :        :                   :         : 4         :                
-GND*                         : A20       :        :                   :         : 4         :                
-GND*                         : A21       :        :                   :         : 4         :                
-GND*                         : A22       :        :                   :         : 4         :                
-GND*                         : A23       :        :                   :         : 4         :                
+ENET_DATA[5]                 : A17       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[3]                 : A18       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[13]                : A19       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[9]                 : A20       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_CMD                     : A21       : output : 3.3-V LVTTL       :         : 4         : Y              
+ENET_RD_N                    : A22       : output : 3.3-V LVTTL       :         : 4         : Y              
+ENET_CS_N                    : A23       : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : A24       : power  :                   : 3.3V    : 4         :                
 GND                          : A25       : gnd    :                   :         :           :                
 DRAM_DQ[2]                   : AA1       : bidir  : 3.3-V LVTTL       :         : 1         : Y              
@@ -260,16 +260,16 @@ GND*                         : B11       :        :                   :         
 GND*                         : B12       :        :                   :         : 3         :                
 GND+                         : B13       :        :                   :         : 4         :                
 GND*                         : B14       :        :                   :         : 4         :                
-GND*                         : B15       :        :                   :         : 4         :                
-GND*                         : B16       :        :                   :         : 4         :                
-GND*                         : B17       :        :                   :         : 4         :                
-GND*                         : B18       :        :                   :         : 4         :                
-GND*                         : B19       :        :                   :         : 4         :                
-GND*                         : B20       :        :                   :         : 4         :                
-GND*                         : B21       :        :                   :         : 4         :                
-GND*                         : B22       :        :                   :         : 4         :                
-GND*                         : B23       :        :                   :         : 4         :                
-GND*                         : B24       :        :                   :         : 5         :                
+ENET_DATA[7]                 : B15       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[6]                 : B16       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[4]                 : B17       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[2]                 : B18       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[12]                : B19       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[8]                 : B20       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_INT                     : B21       : input  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_WR_N                    : B22       : output : 3.3-V LVTTL       :         : 4         : Y              
+ENET_RST_N                   : B23       : output : 3.3-V LVTTL       :         : 4         : Y              
+ENET_CLK                     : B24       : output : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : B25       :        :                   :         : 5         :                
 GND                          : B26       : gnd    :                   :         :           :                
 VCCIO2                       : C1        : power  :                   : 3.3V    : 2         :                
@@ -288,9 +288,9 @@ SW[7]                        : C13       : input  : 3.3-V LVTTL       :         
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
 GND*                         : C16       :        :                   :         : 4         :                
-GND*                         : C17       :        :                   :         : 4         :                
+ENET_DATA[1]                 : C17       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : C18       : gnd    :                   :         :           :                
-GND*                         : C19       :        :                   :         : 4         :                
+ENET_DATA[10]                : C19       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 GND*                         : C21       :        :                   :         : 4         :                
 GND*                         : C22       :        :                   :         : 4         :                
@@ -314,9 +314,9 @@ GND+                         : D13       :        :                   :         
 GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                
-GND*                         : D17       :        :                   :         : 4         :                
-GND*                         : D18       :        :                   :         : 4         :                
-GND*                         : D19       :        :                   :         : 4         :                
+ENET_DATA[0]                 : D17       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[15]                : D18       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+ENET_DATA[11]                : D19       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 GND*                         : D20       :        :                   :         : 4         :                
 GND*                         : D21       :        :                   :         : 4         :                
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
@@ -341,7 +341,7 @@ VCCIO4                       : E14       : power  :                   : 3.3V    
 GND*                         : E15       :        :                   :         : 4         :                
 GND                          : E16       : gnd    :                   :         :           :                
 VCCIO4                       : E17       : power  :                   : 3.3V    : 4         :                
-GND*                         : E18       :        :                   :         : 4         :                
+ENET_DATA[14]                : E18       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : E19       : gnd    :                   :         :           :                
 GND*                         : E20       :        :                   :         : 4         :                
 GND_PLL2                     : E21       : gnd    :                   :         :           :                

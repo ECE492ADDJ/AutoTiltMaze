@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jan 28, 2017 2:04:25 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1485637465899</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jan 31, 2017 12:49:40 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1485892180929</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest_bsp</BspGeneratedLocation>
-        <BspSettingsFile>./settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../niosII_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_qsys_0</Cpu>
@@ -1709,44 +1709,56 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>descriptor_memory</slaveDescriptor>
+                <addressRange>0x01108000 - 0x01108FFF</addressRange>
+                <addressSpan>4096</addressSpan>
+                <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x01109000 - 0x0110901F</addressRange>
+                <addressRange>0x0110A000 - 0x0110A01F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>on_board_switches</slaveDescriptor>
-                <addressRange>0x01109020 - 0x0110902F</addressRange>
+                <addressRange>0x0110A020 - 0x0110A02F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>green_leds</slaveDescriptor>
-                <addressRange>0x01109030 - 0x0110903F</addressRange>
+                <addressRange>0x0110A030 - 0x0110A03F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>altpll_0</slaveDescriptor>
-                <addressRange>0x01109040 - 0x0110904F</addressRange>
+                <addressRange>0x0110A040 - 0x0110A04F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>dm9000a_0</slaveDescriptor>
+                <addressRange>0x0110A050 - 0x0110A057</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x01109050 - 0x01109057</addressRange>
+                <addressRange>0x0110A058 - 0x0110A05F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x01109058 - 0x0110905F</addressRange>
+                <addressRange>0x0110A060 - 0x0110A067</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>character_lcd_0</slaveDescriptor>
-                <addressRange>0x01109060 - 0x01109061</addressRange>
+                <addressRange>0x0110A068 - 0x0110A069</addressRange>
                 <addressSpan>2</addressSpan>
                 <attributes/>
         </MemoryMap>

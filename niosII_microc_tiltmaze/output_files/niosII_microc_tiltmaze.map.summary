@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Jan 28 15:37:50 2017
+Analysis & Synthesis Status : Successful - Tue Jan 31 12:43:18 2017
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
 Revision Name : niosII_microc_tiltmaze
 Top-level Entity Name : niosII_microc_tiltmaze
 Family : Cyclone II
-Total logic elements : 5,088
-    Total combinational functions : 4,188
+Total logic elements : 5,084
+    Total combinational functions : 4,184
     Dedicated logic registers : 3,041
 Total registers : 3041
 Total pins : 131
