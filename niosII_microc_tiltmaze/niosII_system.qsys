@@ -148,14 +148,6 @@
          type = "String";
       }
    }
-   element sdram_0.s1
-   {
-      datum baseAddress
-      {
-         value = "8388608";
-         type = "String";
-      }
-   }
    element onchip_memory2_0.s1
    {
       datum baseAddress
@@ -164,11 +156,11 @@
          type = "String";
       }
    }
-   element on_board_switches.s1
+   element green_leds.s1
    {
       datum baseAddress
       {
-         value = "17866784";
+         value = "17866800";
          type = "String";
       }
    }
@@ -180,6 +172,14 @@
          type = "String";
       }
    }
+   element on_board_switches.s1
+   {
+      datum baseAddress
+      {
+         value = "17866784";
+         type = "String";
+      }
+   }
    element timer_0.s1
    {
       datum baseAddress
@@ -188,11 +188,11 @@
          type = "String";
       }
    }
-   element green_leds.s1
+   element sdram_0.s1
    {
       datum baseAddress
       {
-         value = "17866800";
+         value = "8388608";
          type = "String";
       }
    }
@@ -248,7 +248,7 @@
  <parameter name="projectName">niosII_microc_tiltmaze.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1485986796066" />
+ <parameter name="timeStamp" value="1486160244763" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -735,7 +735,6 @@
  </module>
  <module kind="dm9000a" version="7.2" enabled="1" name="dm9000a_inst">
   <parameter name="AUTO_CLOCK_CLOCK_RATE" value="25000000" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
  <connection
    kind="avalon"
@@ -1039,13 +1038,10 @@
    start="nios2_qsys_0.jtag_debug_module_reset"
    end="descriptor_memory.reset1" />
  <connection
-   kind="avalon"
+   kind="clock"
    version="12.1"
-   start="nios2_qsys_0.data_master"
-   end="dm9000a_inst.avalon_slave_0">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0110a050" />
- </connection>
+   start="altpll_0.c1"
+   end="nios2_qsys_0.clk" />
  <connection
    kind="reset"
    version="12.1"
@@ -1057,17 +1053,20 @@
    start="nios2_qsys_0.jtag_debug_module_reset"
    end="dm9000a_inst.clock_reset" />
  <connection
+   kind="avalon"
+   version="12.1"
+   start="nios2_qsys_0.data_master"
+   end="dm9000a_inst.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0110a050" />
+ </connection>
+ <connection
    kind="interrupt"
    version="12.1"
    start="nios2_qsys_0.d_irq"
    end="dm9000a_inst.interrupt_sender">
   <parameter name="irqNumber" value="2" />
  </connection>
- <connection
-   kind="clock"
-   version="12.1"
-   start="altpll_0.c1"
-   end="nios2_qsys_0.clk" />
  <connection
    kind="clock"
    version="12.1"

@@ -133,27 +133,27 @@ ENET_CLK <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |niosII_microc_tiltmaze|niosII_system:u0
-dm9000a_0_export_0_DATA[0] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[1] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[2] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[3] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[4] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[5] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[6] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[7] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[8] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[9] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[10] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[11] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[12] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[13] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[14] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_DATA[15] <> dm9000a:dm9000a_0.ENET_DATA
-dm9000a_0_export_0_CMD <= dm9000a:dm9000a_0.ENET_CMD
-dm9000a_0_export_0_RD_N <= dm9000a:dm9000a_0.ENET_RD_N
-dm9000a_0_export_0_WR_N <= dm9000a:dm9000a_0.ENET_WR_N
-dm9000a_0_export_0_CS_N <= dm9000a:dm9000a_0.ENET_CS_N
-dm9000a_0_export_0_RST_N <= dm9000a:dm9000a_0.ENET_RST_N
+dm9000a_0_export_0_DATA[0] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[1] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[2] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[3] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[4] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[5] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[6] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[7] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[8] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[9] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[10] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[11] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[12] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[13] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[14] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_DATA[15] <> dm9000a:dm9000a_inst.ENET_DATA
+dm9000a_0_export_0_CMD <= dm9000a:dm9000a_inst.ENET_CMD
+dm9000a_0_export_0_RD_N <= dm9000a:dm9000a_inst.ENET_RD_N
+dm9000a_0_export_0_WR_N <= dm9000a:dm9000a_inst.ENET_WR_N
+dm9000a_0_export_0_CS_N <= dm9000a:dm9000a_inst.ENET_CS_N
+dm9000a_0_export_0_RST_N <= dm9000a:dm9000a_inst.ENET_RST_N
 dm9000a_0_export_0_INT => dm9000a_0_export_0_INT.IN1
 altpll_0_c0_clk <= niosII_system_altpll_0:altpll_0.c0
 character_lcd_0_external_interface_DATA[0] <> niosII_system_character_lcd_0:character_lcd_0.LCD_DATA
@@ -13962,11 +13962,15 @@ address => readdata[28].DATAIN
 address => readdata[27].DATAIN
 address => readdata[23].DATAIN
 address => readdata[20].DATAIN
+address => readdata[18].DATAIN
 address => readdata[15].DATAIN
 address => readdata[14].DATAIN
 address => readdata[13].DATAIN
-address => readdata[11].DATAIN
+address => readdata[12].DATAIN
 address => readdata[7].DATAIN
+address => readdata[6].DATAIN
+address => readdata[5].DATAIN
+address => readdata[4].DATAIN
 address => readdata[3].DATAIN
 address => readdata[2].DATAIN
 address => readdata[1].DATAIN
@@ -13977,21 +13981,21 @@ readdata[0] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[1] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[2] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[3] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[4] <= <GND>
-readdata[5] <= <GND>
-readdata[6] <= <GND>
+readdata[4] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[5] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[6] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[7] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[8] <= <GND>
 readdata[9] <= <GND>
 readdata[10] <= <GND>
-readdata[11] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[12] <= <GND>
+readdata[11] <= <GND>
+readdata[12] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[13] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[14] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[15] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[16] <= <GND>
 readdata[17] <= <GND>
-readdata[18] <= <GND>
+readdata[18] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[19] <= <GND>
 readdata[20] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[21] <= <GND>
@@ -17387,7 +17391,8 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|niosII_microc_tiltmaze|niosII_system:u0|dm9000a:dm9000a_0
+|niosII_microc_tiltmaze|niosII_system:u0|dm9000a:dm9000a_inst
+clock => ~NO_FANOUT~
 iCMD => ENET_CMD.DATAIN
 iRD_N => ENET_RD_N.DATAIN
 iWR_N => ENET_WR_N.DATAIN
@@ -20748,7 +20753,7 @@ av_readdatavalid => ~NO_FANOUT~
 av_waitrequest => ~NO_FANOUT~
 
 
-|niosII_microc_tiltmaze|niosII_system:u0|altera_merlin_slave_translator:dm9000a_0_avalon_slave_0_translator
+|niosII_microc_tiltmaze|niosII_system:u0|altera_merlin_slave_translator:dm9000a_inst_avalon_slave_0_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -44093,7 +44098,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|niosII_microc_tiltmaze|niosII_system:u0|altera_merlin_slave_agent:dm9000a_0_avalon_slave_0_translator_avalon_universal_slave_0_agent
+|niosII_microc_tiltmaze|niosII_system:u0|altera_merlin_slave_agent:dm9000a_inst_avalon_slave_0_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -44748,7 +44753,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|niosII_microc_tiltmaze|niosII_system:u0|altera_merlin_slave_agent:dm9000a_0_avalon_slave_0_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|niosII_microc_tiltmaze|niosII_system:u0|altera_merlin_slave_agent:dm9000a_inst_avalon_slave_0_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -45052,7 +45057,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|niosII_microc_tiltmaze|niosII_system:u0|altera_avalon_sc_fifo:dm9000a_0_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo
+|niosII_microc_tiltmaze|niosII_system:u0|altera_avalon_sc_fifo:dm9000a_inst_avalon_slave_0_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -45853,7 +45858,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|niosII_microc_tiltmaze|niosII_system:u0|altera_avalon_sc_fifo:dm9000a_0_avalon_slave_0_translator_avalon_universal_slave_0_agent_rdata_fifo
+|niosII_microc_tiltmaze|niosII_system:u0|altera_avalon_sc_fifo:dm9000a_inst_avalon_slave_0_translator_avalon_universal_slave_0_agent_rdata_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK

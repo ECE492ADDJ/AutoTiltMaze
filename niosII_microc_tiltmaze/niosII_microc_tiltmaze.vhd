@@ -155,6 +155,7 @@ begin
             green_leds_external_connection_export        => LEDG,
             on_board_switches_external_connection_export => SW,
             altpll_0_c0_clk                              => DRAM_CLK,
+				--altpll
             sdram_0_wire_addr                       		=> DRAM_ADDR,                      
             sdram_0_wire_ba                         		=> BA,                        
             sdram_0_wire_cas_n                      		=> DRAM_CAS_N,                      

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Jan 31 12:43:49 2017
+Fitter Status : Successful - Fri Feb  3 14:08:54 2017
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
 Revision Name : niosII_microc_tiltmaze
 Top-level Entity Name : niosII_microc_tiltmaze
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 4,699 / 33,216 ( 14 % )
-    Total combinational functions : 4,211 / 33,216 ( 13 % )
+Total logic elements : 4,712 / 33,216 ( 14 % )
+    Total combinational functions : 4,227 / 33,216 ( 13 % )
     Dedicated logic registers : 2,872 / 33,216 ( 9 % )
 Total registers : 3051
 Total pins : 131 / 475 ( 28 % )
