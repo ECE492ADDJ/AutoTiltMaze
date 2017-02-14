@@ -69,16 +69,10 @@ library ieee;
 		SRAM_LB_N	:	out	std_logic;
 		SRAM_CE_N	:	out	std_logic;
 		
-		-- Ethernet controller
+		-- UART
 		
-		ENET_CMD		: out std_logic;
-      ENET_CS_N	: out std_logic;
-      ENET_DATA	: inout std_logic_vector (15 downto 0);
-      ENET_INT		: in std_logic;
-      ENET_RD_N	: out std_logic;
-      ENET_RST_N	: out std_logic;
-      ENET_WR_N	: out std_logic;
-		ENET_CLK 	: out std_logic
+		UART_RXD 	: in	std_logic;
+		UART_TXD		: out std_logic
 		
 	);
 end niosII_microc_tiltmaze;
@@ -117,14 +111,9 @@ architecture structure of niosII_microc_tiltmaze is
             sram_0_external_interface_CE_N               : out   std_logic;                                        -- CE_N
             sram_0_external_interface_OE_N               : out   std_logic;                                        -- OE_N
             sram_0_external_interface_WE_N               : out   std_logic;				-- WE_N
-				dm9000a_0_export_0_DATA                      : inout std_logic_vector(15 downto 0) := (others => 'X'); -- DATA
-            dm9000a_0_export_0_CMD                       : out   std_logic;                                        -- CMD
-            dm9000a_0_export_0_RD_N                      : out   std_logic;                                        -- RD_N
-            dm9000a_0_export_0_WR_N                      : out   std_logic;                                        -- WR_N
-            dm9000a_0_export_0_CS_N                      : out   std_logic;                                        -- CS_N
-            dm9000a_0_export_0_RST_N                     : out   std_logic;                                        -- RST_N
-            dm9000a_0_export_0_INT                       : in    std_logic                    := 'X'              -- INT
-        );
+            rs232_0_external_interface_RXD               : in    std_logic                     := 'X';             -- rxd
+            rs232_0_external_interface_TXD               : out   std_logic                                         -- txd
+			);
     end component niosII_system;
 
 --	These signals are for matching the provided IP core to
@@ -171,13 +160,8 @@ begin
             sram_0_external_interface_CE_N          		=> SRAM_CE_N,         
             sram_0_external_interface_OE_N          		=> SRAM_OE_N,         
             sram_0_external_interface_WE_N          		=> SRAM_WE_N,
-				dm9000a_0_export_0_DATA                      => ENET_DATA,                      --                    dm9000a_0_export_0.DATA
-            dm9000a_0_export_0_CMD                       => ENET_CMD,                       --                                      .CMD
-            dm9000a_0_export_0_RD_N                      => ENET_RD_N,                      --                                      .RD_N
-            dm9000a_0_export_0_WR_N                      => ENET_WR_N,                      --                                      .WR_N
-            dm9000a_0_export_0_CS_N                      => ENET_CS_N,                      --                                      .CS_N
-            dm9000a_0_export_0_RST_N                     => ENET_RST_N,                     --                                      .RST_N
-            dm9000a_0_export_0_INT                       => ENET_INT                        --                                      .INT
-        );
+				rs232_0_external_interface_RXD               => UART_RXD,               --            uart_0_external_connection.rxd
+            rs232_0_external_interface_TXD               => UART_TXD                --                                      .txd
+			);
 
 end structure;

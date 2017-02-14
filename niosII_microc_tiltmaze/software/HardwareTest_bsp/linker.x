@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'niosII_system'
  * SOPC Builder design path: ../../niosII_system.sopcinfo
  *
- * Generated: Sat Jan 28 14:04:27 MST 2017
+ * Generated: Tue Feb 07 11:33:48 MST 2017
  */
 
 /*
@@ -54,12 +54,14 @@ MEMORY
     sram_0 : ORIGIN = 0x1080000, LENGTH = 524288
     reset : ORIGIN = 0x1104000, LENGTH = 32
     onchip_memory2_0 : ORIGIN = 0x1104020, LENGTH = 16352
+    descriptor_memory : ORIGIN = 0x1108000, LENGTH = 4096
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_sdram_0 = 0x800000;
 __alt_mem_sram_0 = 0x1080000;
 __alt_mem_onchip_memory2_0 = 0x1104000;
+__alt_mem_descriptor_memory = 0x1108000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -377,6 +379,23 @@ SECTIONS
     } > onchip_memory2_0
 
     PROVIDE (_alt_partition_onchip_memory2_0_load_addr = LOADADDR(.onchip_memory2_0));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .descriptor_memory : AT ( LOADADDR (.onchip_memory2_0) + SIZEOF (.onchip_memory2_0) )
+    {
+        PROVIDE (_alt_partition_descriptor_memory_start = ABSOLUTE(.));
+        *(.descriptor_memory. descriptor_memory.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_descriptor_memory_end = ABSOLUTE(.));
+    } > descriptor_memory
+
+    PROVIDE (_alt_partition_descriptor_memory_load_addr = LOADADDR(.descriptor_memory));
 
     /*
      * Stabs debugging sections.

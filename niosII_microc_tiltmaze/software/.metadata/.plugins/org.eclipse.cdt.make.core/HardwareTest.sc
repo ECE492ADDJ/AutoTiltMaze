@@ -9,6 +9,7 @@
 <includePath path="/afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest_bsp/"/>
 <includePath path="/afs/ualberta.ca/home/d/k/dktrotti/AutoTiltMaze/niosII_microc_tiltmaze/software/HardwareTest_bsp/drivers/inc"/>
 <includePath path="/OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2"/>
+<includePath path="/OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2/nios2-elf/mno-hw-mul"/>
 <includePath path="/OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2/nios2-elf"/>
 <includePath path="/OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../../nios2-elf/include/c++/4.1.2/backward"/>
 <includePath path="/OPT/altera/12.1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/include"/>

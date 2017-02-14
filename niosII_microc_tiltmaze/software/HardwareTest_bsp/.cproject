@@ -15,7 +15,7 @@
 							<builder buildPath="${workspace_loc://HardwareTest_bsp}" id="cdt.managedbuild.target.gnu.builder.base.727273310" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.203343951" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.404650626" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
-								<option id="gnu.cpp.compiler.option.preprocessor.undef.646412086" superClass="gnu.cpp.compiler.option.preprocessor.undef" valueType="undefDefinedSymbols">
+								<option id="gnu.cpp.compiler.option.preprocessor.undef.646412086" name="Undefined symbols (-U)" superClass="gnu.cpp.compiler.option.preprocessor.undef" valueType="undefDefinedSymbols">
 									<listOptionValue builtIn="false" value="__x86_64"/>
 									<listOptionValue builtIn="false" value="__INT_FAST32_MAX__"/>
 									<listOptionValue builtIn="false" value="__SIG_ATOMIC_MAX__"/>
@@ -26,6 +26,7 @@
 									<listOptionValue builtIn="false" value="__SCHAR_MAX__"/>
 									<listOptionValue builtIn="false" value="__DEC128_MANT_DIG__"/>
 									<listOptionValue builtIn="false" value="__UINTPTR_TYPE__"/>
+									<listOptionValue builtIn="false" value="__nios2__"/>
 									<listOptionValue builtIn="false" value="__GCC_ATOMIC_INT_LOCK_FREE"/>
 									<listOptionValue builtIn="false" value="__DBL_MIN_10_EXP__"/>
 									<listOptionValue builtIn="false" value="__unix__"/>
@@ -40,22 +41,24 @@
 									<listOptionValue builtIn="false" value="__FLT_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__LDBL_MANT_DIG__"/>
 									<listOptionValue builtIn="false" value="__DEC32_EPSILON__"/>
+									<listOptionValue builtIn="false" value="__nios2"/>
 									<listOptionValue builtIn="false" value="__INTPTR_MAX__"/>
 									<listOptionValue builtIn="false" value="__LDBL_DIG__"/>
 									<listOptionValue builtIn="false" value="__INT_LEAST8_MAX__"/>
 									<listOptionValue builtIn="false" value="__LDBL_DENORM_MIN__"/>
-									<listOptionValue builtIn="false" value="__DEC32_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__DEC128_MAX__"/>
+									<listOptionValue builtIn="false" value="__DEC32_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__INT_FAST8_MAX__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST8_MAX__"/>
 									<listOptionValue builtIn="false" value="_GNU_SOURCE"/>
+									<listOptionValue builtIn="false" value="__nios2_little_endian__"/>
 									<listOptionValue builtIn="false" value="__GNUC_PATCHLEVEL__"/>
 									<listOptionValue builtIn="false" value="__DEC32_SUBNORMAL_MIN__"/>
 									<listOptionValue builtIn="false" value="__SIZEOF_POINTER__"/>
 									<listOptionValue builtIn="false" value="__SSE2_MATH__"/>
 									<listOptionValue builtIn="false" value="__WINT_MAX__"/>
-									<listOptionValue builtIn="false" value="__LDBL_HAS_INFINITY__"/>
 									<listOptionValue builtIn="false" value="__FLT_MAX_10_EXP__"/>
+									<listOptionValue builtIn="false" value="__LDBL_HAS_INFINITY__"/>
 									<listOptionValue builtIn="false" value="__code_model_small__"/>
 									<listOptionValue builtIn="false" value="__DEC64_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__ATOMIC_ACQ_REL"/>
@@ -66,8 +69,8 @@
 									<listOptionValue builtIn="false" value="__UINT_FAST8_MAX__"/>
 									<listOptionValue builtIn="false" value="__DEC64_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__STDC_IEC_559__"/>
-									<listOptionValue builtIn="false" value="__UINT16_C(c)"/>
 									<listOptionValue builtIn="false" value="__INT16_MAX__"/>
+									<listOptionValue builtIn="false" value="__UINT16_C(c)"/>
 									<listOptionValue builtIn="false" value="__k8__"/>
 									<listOptionValue builtIn="false" value="__LDBL_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST64_MAX__"/>
@@ -75,22 +78,26 @@
 									<listOptionValue builtIn="false" value="__SSE__"/>
 									<listOptionValue builtIn="false" value="__FLT_RADIX__"/>
 									<listOptionValue builtIn="false" value="__INTMAX_C(c)"/>
+									<listOptionValue builtIn="false" value="__USING_SJLJ_EXCEPTIONS__"/>
 									<listOptionValue builtIn="false" value="__gnu_linux__"/>
-									<listOptionValue builtIn="false" value="__FLT_DIG__"/>
 									<listOptionValue builtIn="false" value="__UINT8_MAX__"/>
+									<listOptionValue builtIn="false" value="__FLT_DIG__"/>
 									<listOptionValue builtIn="false" value="__INTMAX_TYPE__"/>
-									<listOptionValue builtIn="false" value="__LDBL_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__INT_LEAST32_TYPE__"/>
+									<listOptionValue builtIn="false" value="__LDBL_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__UINT32_MAX__"/>
 									<listOptionValue builtIn="false" value="__SIZEOF_INT128__"/>
+									<listOptionValue builtIn="false" value="__nios2_5b"/>
 									<listOptionValue builtIn="false" value="__LONG_LONG_MAX__"/>
+									<listOptionValue builtIn="false" value="__NIOS2"/>
 									<listOptionValue builtIn="false" value="__amd64"/>
 									<listOptionValue builtIn="false" value="__DBL_HAS_INFINITY__"/>
 									<listOptionValue builtIn="false" value="__UINT32_C(c)"/>
-									<listOptionValue builtIn="false" value="__DBL_MAX_10_EXP__"/>
 									<listOptionValue builtIn="false" value="__FLT_HAS_QUIET_NAN__"/>
+									<listOptionValue builtIn="false" value="__DBL_MAX_10_EXP__"/>
 									<listOptionValue builtIn="false" value="__SIG_ATOMIC_TYPE__"/>
 									<listOptionValue builtIn="false" value="__FLT_HAS_DENORM__"/>
+									<listOptionValue builtIn="false" value="__NIOS2__"/>
 									<listOptionValue builtIn="false" value="__NO_INLINE__"/>
 									<listOptionValue builtIn="false" value="__INT_LEAST16_MAX__"/>
 									<listOptionValue builtIn="false" value="__DEC128_EPSILON__"/>
@@ -105,12 +112,12 @@
 									<listOptionValue builtIn="false" value="__UINT_FAST64_TYPE__"/>
 									<listOptionValue builtIn="false" value="__INTPTR_TYPE__"/>
 									<listOptionValue builtIn="false" value="__INT64_TYPE__"/>
-									<listOptionValue builtIn="false" value="__DBL_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__ATOMIC_ACQUIRE"/>
+									<listOptionValue builtIn="false" value="__DBL_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__WINT_TYPE__"/>
 									<listOptionValue builtIn="false" value="__FLOAT_WORD_ORDER__"/>
-									<listOptionValue builtIn="false" value="__DEC64_SUBNORMAL_MIN__"/>
 									<listOptionValue builtIn="false" value="__ATOMIC_CONSUME"/>
+									<listOptionValue builtIn="false" value="__DEC64_SUBNORMAL_MIN__"/>
 									<listOptionValue builtIn="false" value="__INT_FAST32_TYPE__"/>
 									<listOptionValue builtIn="false" value="__UINT_FAST8_TYPE__"/>
 									<listOptionValue builtIn="false" value="__PTRDIFF_MAX__"/>
@@ -118,23 +125,25 @@
 									<listOptionValue builtIn="false" value="__INT_LEAST16_TYPE__"/>
 									<listOptionValue builtIn="false" value="__SIZE_TYPE__"/>
 									<listOptionValue builtIn="false" value="__DEC32_MANT_DIG__"/>
+									<listOptionValue builtIn="false" value="NIOS2"/>
 									<listOptionValue builtIn="false" value="__ATOMIC_RELAXED"/>
-									<listOptionValue builtIn="false" value="__DBL_MAX__"/>
 									<listOptionValue builtIn="false" value="__GXX_WEAK__"/>
+									<listOptionValue builtIn="false" value="__DBL_MAX__"/>
 									<listOptionValue builtIn="false" value="__GCC_ATOMIC_TEST_AND_SET_TRUEVAL"/>
 									<listOptionValue builtIn="false" value="__INT_FAST16_MAX__"/>
 									<listOptionValue builtIn="false" value="__UINT16_MAX__"/>
 									<listOptionValue builtIn="false" value="__GNUG__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST8_TYPE__"/>
-									<listOptionValue builtIn="false" value="__UINT_FAST32_TYPE__"/>
 									<listOptionValue builtIn="false" value="unix"/>
+									<listOptionValue builtIn="false" value="__UINT_FAST32_TYPE__"/>
+									<listOptionValue builtIn="false" value="__nios2_5b__"/>
 									<listOptionValue builtIn="false" value="__cplusplus"/>
 									<listOptionValue builtIn="false" value="__FLT_EVAL_METHOD__"/>
 									<listOptionValue builtIn="false" value="__UINT16_TYPE__"/>
 									<listOptionValue builtIn="false" value="__UINT32_TYPE__"/>
 									<listOptionValue builtIn="false" value="__PRAGMA_REDEFINE_EXTNAME"/>
-									<listOptionValue builtIn="false" value="__FLT_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__UINT_FAST16_MAX__"/>
+									<listOptionValue builtIn="false" value="__FLT_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__LDBL_EPSILON__"/>
 									<listOptionValue builtIn="false" value="__DEC64_MIN__"/>
 									<listOptionValue builtIn="false" value="_LP64"/>
@@ -169,12 +178,13 @@
 									<listOptionValue builtIn="false" value="__GNUC_RH_RELEASE__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST32_TYPE__"/>
 									<listOptionValue builtIn="false" value="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_4"/>
-									<listOptionValue builtIn="false" value="__SIZEOF_LONG_DOUBLE__"/>
 									<listOptionValue builtIn="false" value="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_1"/>
+									<listOptionValue builtIn="false" value="__SIZEOF_LONG_DOUBLE__"/>
 									<listOptionValue builtIn="false" value="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_2"/>
 									<listOptionValue builtIn="false" value="__SIZE_MAX__"/>
 									<listOptionValue builtIn="false" value="__UINT_FAST32_MAX__"/>
 									<listOptionValue builtIn="false" value="__EXCEPTIONS"/>
+									<listOptionValue builtIn="false" value="nios2"/>
 									<listOptionValue builtIn="false" value="__INT_FAST64_MAX__"/>
 									<listOptionValue builtIn="false" value="__x86_64__"/>
 									<listOptionValue builtIn="false" value="__DBL_DECIMAL_DIG__"/>
@@ -195,10 +205,12 @@
 									<listOptionValue builtIn="false" value="__BIGGEST_ALIGNMENT__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST16_TYPE__"/>
 									<listOptionValue builtIn="false" value="__DECIMAL_BID_FORMAT__"/>
+									<listOptionValue builtIn="false" value="nios2_5b"/>
+									<listOptionValue builtIn="false" value="__nios2_little_endian"/>
 									<listOptionValue builtIn="false" value="__GCC_ATOMIC_SHORT_LOCK_FREE"/>
 									<listOptionValue builtIn="false" value="__WINT_MIN__"/>
-									<listOptionValue builtIn="false" value="__INT16_C(c)"/>
 									<listOptionValue builtIn="false" value="__INT64_MAX__"/>
+									<listOptionValue builtIn="false" value="__INT16_C(c)"/>
 									<listOptionValue builtIn="false" value="__INT_MAX__"/>
 									<listOptionValue builtIn="false" value="__DEC64_EPSILON__"/>
 									<listOptionValue builtIn="false" value="__STDC_ISO_10646__"/>
@@ -209,6 +221,7 @@
 									<listOptionValue builtIn="false" value="__STDC__"/>
 									<listOptionValue builtIn="false" value="__LDBL_MIN__"/>
 									<listOptionValue builtIn="false" value="__SSE2__"/>
+									<listOptionValue builtIn="false" value="nios2_little_endian"/>
 									<listOptionValue builtIn="false" value="__INT8_TYPE__"/>
 									<listOptionValue builtIn="false" value="__BYTE_ORDER__"/>
 									<listOptionValue builtIn="false" value="_STDC_PREDEF_H"/>
@@ -266,7 +279,7 @@
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.704410555" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.488169194" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
-								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.1790137367" superClass="gnu.c.compiler.option.preprocessor.undef.symbol" valueType="undefDefinedSymbols">
+								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.1790137367" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol" valueType="undefDefinedSymbols">
 									<listOptionValue builtIn="false" value="__x86_64"/>
 									<listOptionValue builtIn="false" value="__INT_FAST32_MAX__"/>
 									<listOptionValue builtIn="false" value="__SIG_ATOMIC_MAX__"/>
@@ -276,8 +289,9 @@
 									<listOptionValue builtIn="false" value="__INT_LEAST64_TYPE__"/>
 									<listOptionValue builtIn="false" value="__SCHAR_MAX__"/>
 									<listOptionValue builtIn="false" value="__DEC128_MANT_DIG__"/>
-									<listOptionValue builtIn="false" value="__UINTPTR_TYPE__"/>
 									<listOptionValue builtIn="false" value="__GCC_ATOMIC_INT_LOCK_FREE"/>
+									<listOptionValue builtIn="false" value="__nios2__"/>
+									<listOptionValue builtIn="false" value="__UINTPTR_TYPE__"/>
 									<listOptionValue builtIn="false" value="__DBL_MIN_10_EXP__"/>
 									<listOptionValue builtIn="false" value="__unix__"/>
 									<listOptionValue builtIn="false" value="__DBL_DENORM_MIN__"/>
@@ -291,6 +305,7 @@
 									<listOptionValue builtIn="false" value="__FLT_MIN_EXP__"/>
 									<listOptionValue builtIn="false" value="__LDBL_MANT_DIG__"/>
 									<listOptionValue builtIn="false" value="__DEC32_EPSILON__"/>
+									<listOptionValue builtIn="false" value="__nios2"/>
 									<listOptionValue builtIn="false" value="__INTPTR_MAX__"/>
 									<listOptionValue builtIn="false" value="__LDBL_DIG__"/>
 									<listOptionValue builtIn="false" value="__INT_LEAST8_MAX__"/>
@@ -299,6 +314,7 @@
 									<listOptionValue builtIn="false" value="__DEC128_MAX__"/>
 									<listOptionValue builtIn="false" value="__INT_FAST8_MAX__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST8_MAX__"/>
+									<listOptionValue builtIn="false" value="__nios2_little_endian__"/>
 									<listOptionValue builtIn="false" value="__GNUC_PATCHLEVEL__"/>
 									<listOptionValue builtIn="false" value="__DEC32_SUBNORMAL_MIN__"/>
 									<listOptionValue builtIn="false" value="__SIZEOF_POINTER__"/>
@@ -325,6 +341,7 @@
 									<listOptionValue builtIn="false" value="__SSE__"/>
 									<listOptionValue builtIn="false" value="__FLT_RADIX__"/>
 									<listOptionValue builtIn="false" value="__INTMAX_C(c)"/>
+									<listOptionValue builtIn="false" value="__USING_SJLJ_EXCEPTIONS__"/>
 									<listOptionValue builtIn="false" value="__gnu_linux__"/>
 									<listOptionValue builtIn="false" value="__FLT_DIG__"/>
 									<listOptionValue builtIn="false" value="__UINT8_MAX__"/>
@@ -333,7 +350,9 @@
 									<listOptionValue builtIn="false" value="__INT_LEAST32_TYPE__"/>
 									<listOptionValue builtIn="false" value="__UINT32_MAX__"/>
 									<listOptionValue builtIn="false" value="__SIZEOF_INT128__"/>
+									<listOptionValue builtIn="false" value="__nios2_5b"/>
 									<listOptionValue builtIn="false" value="__LONG_LONG_MAX__"/>
+									<listOptionValue builtIn="false" value="__NIOS2"/>
 									<listOptionValue builtIn="false" value="__amd64"/>
 									<listOptionValue builtIn="false" value="__DBL_HAS_INFINITY__"/>
 									<listOptionValue builtIn="false" value="__UINT32_C(c)"/>
@@ -341,6 +360,7 @@
 									<listOptionValue builtIn="false" value="__FLT_HAS_QUIET_NAN__"/>
 									<listOptionValue builtIn="false" value="__SIG_ATOMIC_TYPE__"/>
 									<listOptionValue builtIn="false" value="__FLT_HAS_DENORM__"/>
+									<listOptionValue builtIn="false" value="__NIOS2__"/>
 									<listOptionValue builtIn="false" value="__NO_INLINE__"/>
 									<listOptionValue builtIn="false" value="__INT_LEAST16_MAX__"/>
 									<listOptionValue builtIn="false" value="__DEC128_EPSILON__"/>
@@ -355,8 +375,8 @@
 									<listOptionValue builtIn="false" value="__UINT_FAST64_TYPE__"/>
 									<listOptionValue builtIn="false" value="__INTPTR_TYPE__"/>
 									<listOptionValue builtIn="false" value="__INT64_TYPE__"/>
-									<listOptionValue builtIn="false" value="__DBL_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__ATOMIC_ACQUIRE"/>
+									<listOptionValue builtIn="false" value="__DBL_MAX_EXP__"/>
 									<listOptionValue builtIn="false" value="__WINT_TYPE__"/>
 									<listOptionValue builtIn="false" value="__FLOAT_WORD_ORDER__"/>
 									<listOptionValue builtIn="false" value="__DEC64_SUBNORMAL_MIN__"/>
@@ -368,6 +388,7 @@
 									<listOptionValue builtIn="false" value="__INT_LEAST16_TYPE__"/>
 									<listOptionValue builtIn="false" value="__SIZE_TYPE__"/>
 									<listOptionValue builtIn="false" value="__DEC32_MANT_DIG__"/>
+									<listOptionValue builtIn="false" value="NIOS2"/>
 									<listOptionValue builtIn="false" value="__ATOMIC_RELAXED"/>
 									<listOptionValue builtIn="false" value="__DBL_MAX__"/>
 									<listOptionValue builtIn="false" value="__GCC_ATOMIC_TEST_AND_SET_TRUEVAL"/>
@@ -376,6 +397,7 @@
 									<listOptionValue builtIn="false" value="__UINT_LEAST8_TYPE__"/>
 									<listOptionValue builtIn="false" value="__UINT_FAST32_TYPE__"/>
 									<listOptionValue builtIn="false" value="unix"/>
+									<listOptionValue builtIn="false" value="__nios2_5b__"/>
 									<listOptionValue builtIn="false" value="__FLT_EVAL_METHOD__"/>
 									<listOptionValue builtIn="false" value="__UINT16_TYPE__"/>
 									<listOptionValue builtIn="false" value="__UINT32_TYPE__"/>
@@ -421,6 +443,7 @@
 									<listOptionValue builtIn="false" value="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_2"/>
 									<listOptionValue builtIn="false" value="__SIZE_MAX__"/>
 									<listOptionValue builtIn="false" value="__UINT_FAST32_MAX__"/>
+									<listOptionValue builtIn="false" value="nios2"/>
 									<listOptionValue builtIn="false" value="__INT_FAST64_MAX__"/>
 									<listOptionValue builtIn="false" value="__x86_64__"/>
 									<listOptionValue builtIn="false" value="__DBL_DECIMAL_DIG__"/>
@@ -439,6 +462,8 @@
 									<listOptionValue builtIn="false" value="__BIGGEST_ALIGNMENT__"/>
 									<listOptionValue builtIn="false" value="__UINT_LEAST16_TYPE__"/>
 									<listOptionValue builtIn="false" value="__DECIMAL_BID_FORMAT__"/>
+									<listOptionValue builtIn="false" value="nios2_5b"/>
+									<listOptionValue builtIn="false" value="__nios2_little_endian"/>
 									<listOptionValue builtIn="false" value="__GCC_ATOMIC_SHORT_LOCK_FREE"/>
 									<listOptionValue builtIn="false" value="__WINT_MIN__"/>
 									<listOptionValue builtIn="false" value="__INT16_C(c)"/>
@@ -453,6 +478,7 @@
 									<listOptionValue builtIn="false" value="__STDC__"/>
 									<listOptionValue builtIn="false" value="__LDBL_MIN__"/>
 									<listOptionValue builtIn="false" value="__SSE2__"/>
+									<listOptionValue builtIn="false" value="nios2_little_endian"/>
 									<listOptionValue builtIn="false" value="__INT8_TYPE__"/>
 									<listOptionValue builtIn="false" value="__BYTE_ORDER__"/>
 									<listOptionValue builtIn="false" value="_STDC_PREDEF_H"/>
