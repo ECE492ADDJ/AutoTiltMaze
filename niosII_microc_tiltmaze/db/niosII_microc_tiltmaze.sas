@@ -1,1 +1,1 @@
-niosII_microc_tiltmaze/SOURCE
+niosII_microc_tiltmaze/FIT

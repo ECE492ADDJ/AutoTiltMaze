@@ -156,27 +156,11 @@
          type = "String";
       }
    }
-   element descriptor_memory.s1
+   element on_board_switches.s1
    {
       datum baseAddress
       {
-         value = "17858560";
-         type = "String";
-      }
-   }
-   element timer_0.s1
-   {
-      datum baseAddress
-      {
-         value = "17866752";
-         type = "String";
-      }
-   }
-   element green_leds.s1
-   {
-      datum baseAddress
-      {
-         value = "17866800";
+         value = "17866784";
          type = "String";
       }
    }
@@ -188,11 +172,27 @@
          type = "String";
       }
    }
-   element on_board_switches.s1
+   element green_leds.s1
    {
       datum baseAddress
       {
-         value = "17866784";
+         value = "17866800";
+         type = "String";
+      }
+   }
+   element timer_0.s1
+   {
+      datum baseAddress
+      {
+         value = "17866752";
+         type = "String";
+      }
+   }
+   element descriptor_memory.s1
+   {
+      datum baseAddress
+      {
+         value = "17858560";
          type = "String";
       }
    }
@@ -248,7 +248,7 @@
  <parameter name="projectName">niosII_microc_tiltmaze.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1486849203705" />
+ <parameter name="timeStamp" value="1487792938323" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -360,7 +360,7 @@
   <parameter name="mmu_tlbPtrSz" value="7" />
   <parameter name="mmu_tlbNumWays" value="16" />
   <parameter name="mmu_processIDNumBits" value="8" />
-  <parameter name="impl" value="Tiny" />
+  <parameter name="impl" value="Fast" />
   <parameter name="icache_size" value="4096" />
   <parameter name="icache_ramBlockType" value="Automatic" />
   <parameter name="icache_numTCIM" value="0" />
@@ -740,7 +740,7 @@
    name="rs232_0">
   <parameter name="avalon_bus_type" value="Memory Mapped" />
   <parameter name="clk_rate" value="50000000" />
-  <parameter name="baud" value="115200" />
+  <parameter name="baud" value="57600" />
   <parameter name="parity" value="None" />
   <parameter name="data_bits" value="8" />
   <parameter name="stop_bits" value="1" />
