@@ -1,0 +1,103 @@
+/*
+ * main.c
+ *
+ * The following code is based on hello_ucosii.c from the Altera
+ * Hello World UCOSII template.
+ *
+ *  Created on: Feb 7, 2017
+ *      Author: dktrotti
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "includes.h"
+#include "uart.h"
+
+/* Definition of Task Stacks */
+#define   TASK_STACKSIZE       2048
+OS_STK    task_uart_stk[TASK_STACKSIZE];
+OS_STK    task_main_stk[TASK_STACKSIZE];
+
+/* Definition of Task Priorities */
+#define TASK_UART_PRIORITY      1
+#define TASK_MAIN_PRIORITY      2
+
+/* Definition of global variables */
+OS_EVENT *cmdQ;
+void *cmdarr[16];
+
+void maintask(void* pdata) {
+	INT8U err;
+	char *buf;
+
+	while (1) {
+		buf = (char *) OSQPend(cmdQ, 0, &err);
+
+		if (err != OS_NO_ERR) {
+			printf("Queue pend error\n");
+		}
+
+		printf("Main msg: %s\n", buf);
+
+		uart_write(buf, MSG_MAX_LEN);
+
+		free(buf);
+	}
+}
+
+static void interrupt_isr_uart (void* isr_context, alt_u32 id)
+{
+	static int count = 0;
+
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LEDS_BASE, count);
+
+//	OSQPost(cmdQ, (void *) "Hello");
+//	uart_interrupt_handler();
+}
+
+int main(void)
+{
+	INT8U err;
+
+	cmdQ = OSQCreate(&cmdarr[0], 16);
+
+	// TODO: Figure out why the enhanced interrupt api is not enabled
+//	err = alt_ic_isr_register(RS232_0_IRQ_INTERRUPT_CONTROLLER_ID,
+//			RS232_0_IRQ,
+//			interrupt_isr_uart,
+//			NULL,
+//			NULL);
+	err = alt_irq_register(RS232_0_IRQ_INTERRUPT_CONTROLLER_ID, NULL, interrupt_isr_uart);
+
+	if (err != OS_NO_ERR) {
+		// TODO: Handle ISR registration error
+	}
+
+	uart_init(cmdQ);
+
+//	OSTaskCreateExt(uarttask,
+//			NULL,
+//			(void *)&task_uart_stk[TASK_STACKSIZE-1],
+//			TASK_UART_PRIORITY,
+//			TASK_UART_PRIORITY,
+//			task_uart_stk,
+//			TASK_STACKSIZE,
+//			NULL,
+//			0);
+
+	OSTaskCreateExt(maintask,
+			NULL,
+			(void *)&task_main_stk[TASK_STACKSIZE-1],
+			TASK_MAIN_PRIORITY,
+			TASK_MAIN_PRIORITY,
+			task_main_stk,
+			TASK_STACKSIZE,
+			NULL,
+			0);
+
+	IOWR_ALTERA_AVALON_PIO_DATA(GREEN_LEDS_BASE, 0xff);
+
+	OSStart();
+	return 0;
+}

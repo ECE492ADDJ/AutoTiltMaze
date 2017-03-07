@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project SimpleSocketServerRGMII ****
+
+make all 
+Info: Building ../SimpleSocketServerRGMII_bsp/
+make --no-print-directory -C ../SimpleSocketServerRGMII_bsp/
+[BSP build complete]
+[SimpleSocketServerRGMII build complete]
+
+**** Build Finished ****
